@@ -16,6 +16,8 @@ import thirteen from "./markdown/thirteen";
 import fourteen from "./markdown/fourteen";
 import fifteen from "./markdown/fifteen";
 import wgh from "./markdown/wgh";
+import claudeLike from "./markdown/claudeLike";
+import claudeLikeDark from "./markdown/claudeLikeDark";
 
 import content from "./content.md";
 
@@ -55,7 +57,9 @@ export default {
     fourteen,
     fifteen,
     wgh,
-    custom,
+    claudeLike,
+    claudeLikeDark,
+    custom
   },
   code: {
     atomOneDark,
@@ -69,7 +73,7 @@ export default {
     macGithub,
     macMonokai,
     macVs2015,
-    macXcode,
+    macXcode
   },
-  content,
+  content
 };
