@@ -23,6 +23,20 @@ Fork 自 [markdown2html](https://github.com/TaleAi/markdown2html)，略有调整
 
 > 欢迎提交主题，提供更多文章示例~~
 
+## 本地开发
+
+```bash
+# 安装依赖
+yarn install
+
+# 启动开发服务器
+yarn start
+```
+
+启动后浏览器访问 `http://localhost:3000`。
+
+> Node 版本建议 14~16，项目已内置 `--openssl-legacy-provider` 以兼容 Node 17+。
+
 ## 友情链接
 
 - [markdown2html](https://github.com/TaleAi/markdown2html)：markdown2html

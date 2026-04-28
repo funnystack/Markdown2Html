@@ -33,19 +33,21 @@ color:#2b2b2b;
   color: #2b2b2b;
   margin: 10px 0px;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 15px;
   word-spacing: 2px;
+  line-height: 1.8;
 }
 
 /* 一级标题 */
 #nice h1 {
-  font-size: 25px;
+  font-size: 28px;
+  text-align: left;
 }
 
 /* 一级标题内容 */
 #nice h1 span {
   display: inline-block;
-  font-weight: bold;
+  font-weight: 800;
   color: #40B8FA;
 }
 
@@ -56,14 +58,17 @@ color:#2b2b2b;
 #nice h2 {
   display:block;
   border-bottom: 4px solid #40B8FA;
+  text-align: left;
+  padding-left: 0;
 }
 
 /* 二级标题内容 */
 #nice h2 .content {
   display: flex;
   color: #40B8FA;
-  font-size: 20px;
-  margin-left: 25px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 0;
 }
 
 /* 二级标题前缀 */
@@ -78,27 +83,14 @@ color:#2b2b2b;
 
 /* 二级标题后缀 */
 #nice h2 .suffix {
-  display: flex;
-  box-sizing: border-box;
-  width: 200px;
-  height: 10px;
-  border-top-left-radius: 20px;
-  background: RGBA(64, 184, 250, .5);
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  letter-spacing: 0.544px;
-  justify-content: flex-end;
-  box-sizing: border-box !important;
-  overflow-wrap: break-word !important;
-  float: right;
-  margin-top: -10px;
+  display: none;
 }
 
 /* 三级标题 */
 #nice h3 {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   position:relative;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -108,7 +100,8 @@ color:#2b2b2b;
 #nice h3 .content {
   border-bottom: 2px solid RGBA(79, 177, 249, .65);
   color: #2b2b2b;
-  padding-bottom:2px
+  padding-bottom:2px;
+  display: inline-block;
 }
 
 #nice h3 .content:before{
@@ -117,9 +110,8 @@ color:#2b2b2b;
   height:30px;
   display:block;
   background-image:url(https://my-wechat.mdnice.com/fullstack-2.png);
-  background-position:center;
+  background-position:left center;
   background-size:30px;
-  margin:auto;
   opacity:1;
   background-repeat:no-repeat;
   margin-bottom:-8px;
@@ -132,6 +124,7 @@ color:#2b2b2b;
   height:16px;
   line-height:16px;
   font-size: 16px;
+  text-align: left;
 }
 
 #nice h4 .content:before{
@@ -181,26 +174,25 @@ color:#2b2b2b;
 * 背景色 background:gray;
 */
 #nice blockquote::before {
-  content: "❝";
-  color: RGBA(64, 184, 250, .5);
-  font-size: 34px;
-  line-height: 1;
-  font-weight: 700;
+  content: "";
 }
 
 #nice blockquote {
   text-size-adjust: 100%;
   line-height: 1.55em;
   font-weight: 400;
-  border-radius: 6px;
+  border-radius: 8px;
   color: #595959;
   font-style: normal;
   text-align: left;
   box-sizing: inherit;
-  border-left: none;
-  border: 1px solid RGBA(64, 184, 250, .4);
-  background: RGBA(64, 184, 250, .1);
-
+  border-left: 4px solid #40B8FA;
+  border-top: 1px solid rgba(64, 184, 250, .3);
+  border-right: 1px solid rgba(64, 184, 250, .3);
+  border-bottom: 1px solid rgba(64, 184, 250, .3);
+  background: linear-gradient(135deg, rgba(64, 184, 250, .08), rgba(64, 184, 250, .03));
+  box-shadow: 2px 2px 8px rgba(64, 184, 250, .15);
+  padding: 16px 20px;
 }
 
 #nice blockquote p {
@@ -208,9 +200,7 @@ color:#2b2b2b;
 }
 
 #nice blockquote::after {
-  content: "❞";
-  float: right;
-  color: RGBA(64, 184, 250, .5);
+  content: "";
 }
 
 /* 链接

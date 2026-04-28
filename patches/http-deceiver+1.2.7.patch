@@ -1,0 +1,27 @@
+diff --git a/node_modules/http-deceiver/lib/deceiver.js b/node_modules/http-deceiver/lib/deceiver.js
+index 33e14cb..1882e9d 100644
+--- a/node_modules/http-deceiver/lib/deceiver.js
++++ b/node_modules/http-deceiver/lib/deceiver.js
+@@ -19,12 +19,20 @@ var kOnHeadersComplete;
+ var kOnMessageComplete;
+ var kOnBody;
+ if (mode === 'normal' || mode === 'modern') {
+-  HTTPParser = process.binding('http_parser').HTTPParser;
++  try {
++    HTTPParser = process.binding('http_parser').HTTPParser;
++  } catch (e) {
++    HTTPParser = require('_http_common').HTTPParser;
++  }
+   methods = HTTPParser.methods;
+ 
+   // v6
+   if (!methods)
+-    methods = process.binding('http_parser').methods;
++    try {
++      methods = process.binding('http_parser').methods;
++    } catch (e) {
++      methods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS', 'CONNECT', 'TRACE'];
++    }
+ 
+   reverseMethods = {};
+ 
